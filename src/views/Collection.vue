@@ -14,7 +14,7 @@
          </div>
          <div class="collection">
             <div class="record" v-bind:key="index" v-for="(record, index) in records">
-               <img v-bind:src="`https://fast-wildwood-30146.herokuapp.com/${record.image}`" @click="setActiveRecord(record, index)" v-bind:class="{selected: currentIndex == index}" alt="{{record.artist}} - {{record.title}}" width="150px" height="150px">
+               <img v-bind:src="`https://fast-wildwood-30146.herokuapp.com/${record.image}`" @click="setActiveRecord(record, index)" v-bind:class="{selected: currentIndex == index}" v-bind:alt="`${record.artist} - ${record.title}`">
             </div>
          </div>
    </div>
