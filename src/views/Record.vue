@@ -6,7 +6,7 @@
             <div class="form-group">
                <div v-if="currentRecord.image != null">
                   <label for="image">Skivomslag</label>
-                  <img v-bind:src="`http://localhost:5000/${currentRecord.image}`" alt="Skivomslag" width="200px" height="200px"><br>
+                  <img v-bind:src="`https://fast-wildwood-30146.herokuapp.com/${currentRecord.image}`" v-bind:alt="`${currentRecord.artist} - ${currentRecord.title}`"><br>
                   <input type="file" @change="onFileSelected" name="image" id="image">
                </div>
                <div v-else>
@@ -129,5 +129,8 @@ export default {
 </script>
 
 <style scoped>
-
+   img {
+      width: 200px;
+      height: 200px;
+   }
 </style>
