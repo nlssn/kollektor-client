@@ -13,7 +13,7 @@
             <router-link :to="{path: '/record/' + currentRecord._id}">Redigera</router-link>
          </div>
          <div class="collection">
-            <img v-bind:key="index" v-for="(record, index) in records" v-bind:src="`http://localhost:5000/${record.image}`" @click="setActiveRecord(record, index)" v-bind:class="{selected: currentIndex == index}" alt="" width="150px" height="150px">
+            <img v-bind:key="index" v-for="(record, index) in records" v-bind:src="`http://localhost:5000/${record.image}`" @click="setActiveRecord(record, index)" v-bind:class="{selected: currentIndex == index}" alt="{{record.artist}} - {{record.title}}" width="150px" height="150px">
          </div>
    </div>
 </template>
